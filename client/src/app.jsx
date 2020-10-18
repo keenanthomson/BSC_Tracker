@@ -4,6 +4,6 @@ export default function App(props) {
   const [counter, setCounter] = useState(0);
 
   return (
-    <button onClick={() => setCounter(counter + 1)}>You've brrrr {counter} times!</button>
+    <button onClick={() => setCounter(counter + 1)}>You've hit {counter} times!</button>
   )
 }

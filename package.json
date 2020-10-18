@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server/server.js",
-    "build-dev": "npx webpack-dev-server --hot"
+    "build-dev": "webpack-dev-server --hot --history-api-fallback --open"
   },
   "author": "Keenan Thomson",
   "license": "ISC",

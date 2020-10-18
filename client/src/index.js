@@ -1,22 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'react-hot-loader/patch';
+import {render} from 'react-dom';
 import App from './app.jsx';
-import { AppContainer } from 'react-hot-loader';
+// import { AppContainer } from 'react-hot-loader';
 
-const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('root')
-  );
-}
+// const render = Component => {
+//   ReactDOM.render(
+//     <AppContainer>
+//       <Component />
+//     </AppContainer>,
+//     document.getElementById('root')
+//   );
+// }
 
-render(App)
+// render(App)
 
 if (module.hot) {
-  module.hot.accept('./app.jsx', () => render(App))
+  module.hot.accept('./app.jsx', () => {
+  App = require('./app.jsx').default;
+  render(<App />, document.getElementById('root'))
+  });
 };
 
 // render(<App/>, document.getElementById('root'));
